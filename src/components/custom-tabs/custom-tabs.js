@@ -1,0 +1,1 @@
+import './custom-tabs.scss';

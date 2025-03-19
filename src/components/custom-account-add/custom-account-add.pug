@@ -1,0 +1,18 @@
+div.custom-account-add
+  form(action="#" method='post').custom-account-add__form
+    div.custom-account-add__field
+      +custom-field({
+        type: text,
+        name: 'Токен',
+        placeholder: 'Токен',
+        required: true,
+      })
+    div.custom-account-add__field
+      +custom-field({
+        type: text,
+        name: 'ID',
+        placeholder: 'ID',
+        required: true,
+      })
+    div.custom-account-add__field
+      button(type='submit').button.button--main Добавить

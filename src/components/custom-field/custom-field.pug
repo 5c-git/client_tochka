@@ -1,0 +1,21 @@
+mixin custom-field(props)
+  div.custom-field
+    if props.label
+      label.custom-field__label=props.label
+    div.custom-field__inner
+      input(
+        class=props.secondClass
+        type=props.type 
+        inputmode=props.inputmode
+        name=props.name
+        id=props.id
+        minlength=props.minlength
+        maxlength=props.maxlength
+        autocomplete='none'
+        autocapitalize='off'
+        placeholder=props.placeholder
+        value=props.value
+        disabled=props.disabled
+        required=props.required
+        readonly=props.readonly
+      ).custom-field__input

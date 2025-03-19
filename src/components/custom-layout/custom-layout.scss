@@ -1,0 +1,49 @@
+@import 'src/utils/utils';
+
+.custom-layout {
+  padding-top: 24px;
+  padding-right: 30px;
+  padding-bottom: 24px;
+  padding-left: 30px;
+  background: var(--mib-background);
+  border-radius: var(--mib-radius);
+  overflow-x: auto;
+  overflow-y: hidden;
+
+  &__title {
+    @include SemiBold-18;
+    display: block;
+    margin: 0;
+    margin-bottom: 20px;
+    padding: 0;
+
+    &:not(:first-child) {
+      margin-top: 40px;
+    }
+  }
+
+  &__tabs {
+    margin-bottom: 40px;
+  }
+
+  &__list {
+
+    &--column2 {
+      max-width: 1300px;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 100px;
+    }
+
+    &--260 {
+      max-width: unset;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 40px;
+    }
+  }
+
+  &__pagination {
+    margin-top: 30px;
+  }
+}

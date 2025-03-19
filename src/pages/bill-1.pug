@@ -1,0 +1,10 @@
+extends ../templates/default
+
+block main
+  include ../components/custom-header/custom-header
+
+  +custom-layout({
+    title: 'Список счетов',
+    secondClass: 'custom-layout__list--column2',
+  })
+    include ../components/custom-bill-card/custom-bill-card

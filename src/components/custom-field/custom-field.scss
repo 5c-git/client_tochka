@@ -1,0 +1,35 @@
+@import 'src/utils/utils';
+
+.custom-field {
+
+  &__input {
+    @include transition;
+    width: 100%;
+    max-width: 100%;
+    min-height: 39px;
+    display: block;
+    padding-top: 10px;
+    padding-right: 9px;
+    padding-bottom: 10px;
+    padding-left: 9px;
+    background-color: #fff;
+    border: 1px solid #c4c7cc;
+    border-radius: var(--ui-field-border-radius, 1px);
+    outline: 0;
+    color: #424956;
+    font-family: $main-font;
+    font-size: 15px;
+    line-height: 17px;
+
+    &::placeholder {
+      font-family: $main-font;
+      font-size: 15px;
+      line-height: 17px;
+    }
+
+    &:hover,
+    &:focus {
+      border-color: var(--ui-field-color-primary);
+    }
+  }
+}

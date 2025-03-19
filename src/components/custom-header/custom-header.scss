@@ -1,0 +1,73 @@
+@import 'src/utils/utils';
+
+.custom-header {
+  height: var(--mib-height);
+  margin-bottom: 40px;
+  background: var(--mib-background);
+  border-radius: var(--mib-radius);
+
+  &__wrapper {
+    display: flex;
+    padding-right: 30px;
+    padding-left: 30px;
+    gap: 30px;
+  }
+
+  &__list {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    gap: 30px;
+
+    &--user {
+      margin-left: auto;
+    }
+  }
+
+  &__item {
+    position: relative;
+    display: inline-flex;
+    height: var(--mib-height);
+    box-sizing: border-box;
+    text-decoration: none;
+
+    &--active {
+      &:after {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        display: block;
+        background: var(--mib-item-underline-color);
+        height: var(--mib-item-underline-size);
+        content: '';
+      }
+
+      .custom-header {
+
+        &__link {
+          color: var(--mib-item-active-color);
+        }
+      }
+    }
+  }
+
+  &__link {
+    position: relative;
+    display: flex;
+    align-items: center;
+    color: var(--mib-item-color);
+    font-family: var(--mib-item-font-family);
+    font-size: var(--mib-item-font-size);
+    font-weight: var(--mib-item-font-weight);
+    text-decoration: none;
+    gap: 5px;
+
+    span {
+      display: block;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+}

@@ -1,0 +1,194 @@
+@import 'src/utils/utils';
+
+.custom-checkbox {
+  display: flex;
+  font-family: $main-font;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 20px;
+
+  &__label {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+  }
+
+  &__input {
+    display: none;
+  }
+
+  &:has(:checked) {
+
+    .custom-checkbox {
+
+      &__box {
+
+        color: var(--Marina-Inch-Worm);
+      }
+    }
+  }
+
+  &__box {
+    position: relative;
+    width: 18px;
+    height: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: auto;
+    color: var(--color-grey-92);
+    border: 1px solid currentColor;
+    border-radius: 4px;
+    background-color: var(--Marina-White);
+    transition:
+      background-color 0.3s,
+      border 0.3s;
+    flex-shrink: 0;
+    order: -1;
+
+    &:before {
+      transition: border 0.3s;
+    }
+  }
+
+  &:not(.custom-checkbox--toggle) {
+
+    input[type='checkbox'] {
+
+      &:checked {
+
+        &+.custom-checkbox__box {
+          background-color: currentColor;
+          border-color: currentColor;
+
+          &:before {
+            position: absolute;
+            top: 2px;
+            width: 5px;
+            height: 10px;
+            border-right: 2px solid var(--Marina-White);
+            border-bottom: 2px solid var(--Marina-White);
+            transform: rotate(45deg);
+            content: '';
+
+            @media(max-width: $phone) {
+              top: 2px;
+              left: 6px;
+              width: 6px;
+              height: 11px;
+            }
+          }
+        }
+      }
+    }
+
+    input[type='radio'] {
+
+      &:checked {
+
+        &+.custom-checkbox__box {
+
+          &:before {
+            background-color: var(--Marina-White);
+            border: 5px solid currentColor;
+
+            @media(max-width: $phone) {
+              border-width: 4px;
+            }
+          }
+        }
+      }
+
+
+      &+.custom-checkbox__box {
+        border-radius: 50%;
+
+        &:before {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-color: var(--Marina-White);
+          border: 1px solid var(--color-grey-92);
+          border-radius: 50%;
+          will-change: border-width;
+          content: '';
+        }
+      }
+    }
+  }
+
+  &--toggle {
+
+    &:has(:checked) {
+
+      .custom-checkbox {
+
+        &__box {
+          background-color: currentColor;
+          $text: attr(data-yes);
+
+          &:before {
+            left: calc(100% - 17px);
+          }
+
+          &:after {
+            position: absolute;
+            left: 4px;
+            color: var(--Marina-Oslo-Gray);
+            font-size: 7px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 17px;
+            text-transform: uppercase;
+            content: $text;
+          }
+        }
+      }
+    }
+
+    .custom-checkbox {
+
+      &__box {
+        position: relative;
+        width: 46px;
+        height: 17px;
+        display: flex;
+        background-color: var(--color-grey-92);
+        border: 0;
+        outline: 1px solid transparent;
+        border-radius: 10px;
+        transition: background-color 0.3s;
+        $text: attr(data-no);
+
+        &:before {
+          position: absolute;
+          z-index: 1;
+          top: 3px;
+          left: 4px;
+          width: 11px;
+          height: 11px;
+          background-color: var(--Marina-White);
+          border-radius: 10px;
+          filter: drop-shadow(0px 2px 1px rgba(82, 91, 104, 0.20));
+          transition: left 0.3s;
+          content: '';
+        }
+
+        &:after {
+          position: absolute;
+          right: 4px;
+          color: var(--Marina-Oslo-Gray);
+          font-size: 7px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: 17px;
+          text-transform: uppercase;
+          content: $text;
+        }
+      }
+    }
+  }
+}

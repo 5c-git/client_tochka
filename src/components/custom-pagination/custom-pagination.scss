@@ -1,0 +1,71 @@
+@import 'src/utils/utils';
+
+.custom-pagination {
+  display: flex;
+  font-family: $main-font;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  gap: 30px;
+
+  &__pages {
+    display: flex;
+    gap: 5px;
+  }
+
+  &__page {
+    padding-left: 4px;
+    padding-right: 3px;
+    color: var(--Marina-Text);
+    user-select: none;
+
+    &:not([href]) {
+      opacity: 0.6;
+    }
+  }
+
+  &__arrows {
+    display: flex;
+    gap: 10px;
+  }
+
+  &__arrow {
+    @include transition;
+    position: relative;
+    display: flex;
+    align-items: center;
+    color: var(--Marina-Text);
+    gap: 5px;
+    user-select: none;
+
+    &:not([href]) {
+      opacity: 0.6;
+    }
+
+    &--prev {
+
+      &:before {
+        width: 7px;
+        height: 7px;
+        border-left: 2px solid currentColor;
+        border-bottom: 2px solid currentColor;
+        transform: rotate(45deg);
+        content: '';
+      }
+    }
+
+    &--next {
+
+      &:after {
+        width: 7px;
+        height: 7px;
+        border-right: 2px solid currentColor;
+        border-bottom: 2px solid currentColor;
+        transform: rotate(-45deg);
+        content: '';
+      }
+    }
+  }
+}

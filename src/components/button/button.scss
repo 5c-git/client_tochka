@@ -1,0 +1,60 @@
+@import 'src/utils/utils';
+
+.button {
+  @include transition;
+
+  position: relative;
+  height: var(--ui-btn-height);
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: var(--ui-btn-padding);
+  color: var(--ui-btn-color);
+  vertical-align: middle;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  white-space: nowrap;
+  font: var(--ui-btn-font-size) / calc(var(--ui-btn-height) - 2px) var(--ui-font-family-open-sans);
+  font-weight: var(--ui-font-weight-bold);
+  background-color: var(--ui-btn-background);
+  border: var(--ui-btn-border);
+  border-color: var(--ui-btn-border-color);
+  border-radius: var(--ui-btn-radius);
+  box-shadow: var(--ui-btn-box-shadow);
+  text-shadow: var(--ui-btn-text-shadow);
+  user-select: none;
+  outline: none;
+  cursor: pointer;
+
+  &:hover {
+    border-color: var(--ui-btn-border-color-hover);
+    background-color: var(--ui-btn-background-hover);
+    box-shadow: var(--ui-btn-box-shadow-hover);
+    color: var(--ui-btn-color-hover);
+    text-decoration: var(--ui-text-transform-none);
+    text-shadow: var(--ui-btn-text-shadow-hover);
+  }
+
+  &:active {
+    outline: none;
+    border-color: var(--ui-btn-border-color-active);
+    background-color: var(--ui-btn-background-active);
+    box-shadow: var(--ui-btn-box-shadow-active);
+    color: var(--ui-btn-color-active);
+    text-shadow: var(--ui-btn-text-shadow-active);
+  }
+
+  &--main {
+    --ui-btn-background: #3bc8f5;
+    --ui-btn-background-hover: #3eddff;
+    --ui-btn-background-active: #12b1e3;
+    --ui-btn-border-color: #3bc8f5;
+    --ui-btn-border-color-hover: #3eddff;
+    --ui-btn-border-color-active: #12b1e3;
+    --ui-btn-color: var(--ui-color-on-primary);
+    --ui-btn-color-hover: var(--ui-color-on-primary);
+    --ui-btn-color-active: var(--ui-color-on-primary);
+  }
+}

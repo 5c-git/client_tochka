@@ -1,0 +1,56 @@
+@import 'src/utils/utils';
+
+.popUp {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 15;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+
+  &__overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    background-color: rgba($color: #000000, $alpha: 70%);
+    backdrop-filter: blur(15px);
+  }
+
+  &__body-fixer {
+    top: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    margin-left: calc(100vw - 100%);
+    overflow: hidden;
+
+    &:before {
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 10;
+      width: 100%;
+      height: 100%;
+      content: '';
+    }
+  }
+
+  &__container {
+    position: relative;
+    z-index: 11;
+    max-height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    pointer-events: none;
+  }
+
+  &__wrapper {
+    pointer-events: auto;
+  }
+}

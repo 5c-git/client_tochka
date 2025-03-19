@@ -1,0 +1,33 @@
+@import 'src/utils/utils';
+
+.accordion {
+
+  &__inner {
+    max-height: 0;
+    display: none;
+    margin-right: -2px;
+    margin-left: -2px;
+    padding-right: 2px;
+    padding-left: 2px;
+    transition: max-height 0.3s ease-in;
+    overflow: hidden;
+  }
+
+  &--active {
+
+    .accordion {
+
+      &__inner {
+        display: block;
+      }
+
+      &__toggle span:after {
+        transform: rotate(45deg);
+      }
+
+      &__toggle span:before {
+        transform: rotate(-45deg);
+      }
+    }
+  }
+}

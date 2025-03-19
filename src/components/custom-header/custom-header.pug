@@ -1,0 +1,36 @@
+section.custom-header
+  div.custom-header__wrapper
+    ul.custom-header__list
+      li.custom-header__item.custom-header__item--active
+        a(href="#").custom-header__link
+          span Аккаунты
+      li.custom-header__item
+        a(href="#").custom-header__link
+          span Счета
+      li.custom-header__item
+        a(href="#").custom-header__link
+          span Логи
+
+    ul.custom-header__list.custom-header__list--user
+      li.custom-header__item
+        a(href="#").custom-header__link
+          +custom-icon({
+            bell: true,
+            counter: '23',
+          })
+      li.custom-header__item
+        a(href="#").custom-header__link
+          +custom-icon({
+            headphones: true,
+          })
+      li.custom-header__item
+        a(href="#").custom-header__link
+          span Счета
+      li.custom-header__item
+        a(href="#").custom-header__link
+          span О разработчике
+      li.custom-header__item
+        a(href="#").custom-header__link
+          svg(width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg")
+            use(href='#icon-5corners')
+          span 5 УГЛОВ

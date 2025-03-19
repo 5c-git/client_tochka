@@ -1,0 +1,41 @@
+@import 'src/utils/utils';
+
+.custom-filter {
+  margin-bottom: 15px;
+  padding-right: 30px;
+  padding-left: 30px;
+  font-family: $main-font;
+
+  &__form {
+    display: flex;
+    gap: 30px;
+  }
+
+  &__field {
+    width: 100%;
+    max-width: 250px;
+  }
+
+  &__label {
+    font-family: $main-font;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px;
+    color: var(--Dark-grey);
+  }
+
+  &__field {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px;
+    gap: 5px;
+  }
+
+  &__field-inner {
+    border-bottom: 1px dashed;
+  }
+}

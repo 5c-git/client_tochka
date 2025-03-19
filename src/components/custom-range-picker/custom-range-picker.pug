@@ -1,0 +1,26 @@
+div.custom-range-picker
+  div.custom-range-picker__field
+    input(
+      type="text"
+      name='Начало периода'
+      data-date-format='d.m.Y'
+      data-min-date='10.03.2025'
+      data-max-date='22.04.2025'
+      placeholder='02.02.2020'
+      autocomplete='off'
+      autocapitalize='off'
+    ).custom-range-picker__input.custom-range-picker__input--start
+  
+  span -
+
+  div.custom-range-picker__field
+    input(
+      type="text"
+      name='Конец периода'
+      data-date-format='d.m.Y'
+      data-min-date='today'
+      data-max-date='05.10.2025'
+      placeholder='02.02.2020'
+      autocomplete='off'
+      autocapitalize='off'
+    ).custom-range-picker__input.custom-range-picker__input--finish

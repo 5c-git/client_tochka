@@ -1,0 +1,10 @@
+@import 'src/utils/utils';
+
+.custom-account-add {
+  
+  &__form {
+    display: grid;
+    grid-template-columns: 320px 220px auto;
+    gap: 16px;
+  }
+}

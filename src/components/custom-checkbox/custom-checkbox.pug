@@ -1,0 +1,17 @@
+mixin custom-checkbox(props)
+  div.custom-checkbox(class=props.secondClass)
+    label.custom-checkbox__label
+      if props.text
+        span!=props.text
+      input(
+        type=props.type
+        id=props.id
+        name=props.name
+        value=props.value
+        required=props.required
+        checked=props.checked
+      ).visually-hidden
+      span(
+        data-yes=props.yes 
+        data-no=props.no
+      ).custom-checkbox__box

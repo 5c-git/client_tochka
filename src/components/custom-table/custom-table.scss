@@ -1,0 +1,58 @@
+@import 'src/utils/utils';
+
+.custom-table {
+  min-width: 100%;
+  font-family: $main-font;
+  border: 0;
+  border-spacing: 0;
+  table-layout: fixed;
+  overflow: hidden;
+
+  &__row {
+
+    &:hover {
+
+      .custom-table__cell {
+        background-color: #f6f8f9;
+      }
+    }
+  }
+
+  &__head-cell {
+    padding-bottom: 20px;
+    color: var(--Marina-Shuttle-Gray);
+    text-align: left;
+  }
+
+  &__cell {
+    min-width: 220px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: var(--Marina-Text);
+  }
+
+  &__head-cell,
+  &__cell {
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px;
+    border-bottom: 1px solid var(--color-grey-92);
+
+    &:not(:first-child) {
+      padding-left: 10px;
+    }
+
+    &:not(:last-child) {
+      padding-right: 10px;
+    }
+  }
+
+  &__head-title {
+    color: inherit;
+  }
+
+  &__cell-title {
+    color: inherit;
+  }
+}

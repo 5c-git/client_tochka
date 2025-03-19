@@ -1,0 +1,27 @@
+mixin custom-layout(props)
+
+  if props.main
+    section.custom-layout
+      span.custom-layout__title Добавить аккаунт
+      div.custom-layout__list
+        include ../custom-account-add/custom-account-add
+      
+      span.custom-layout__title Список аккаунтов
+      div.custom-layout__list.custom-layout__list--column2
+        include ../custom-account-card/custom-account-card
+
+  else
+    section.custom-layout
+      if props.title
+        span.custom-layout__title=props.title
+
+      if props.tabs
+        div.custom-layout__tabs
+          include ../custom-tabs/custom-tabs
+
+      div.custom-layout__list(class=props.secondClass)
+        block
+
+      if props.pagination
+        div.custom-layout__pagination
+          include ../custom-pagination/custom-pagination
