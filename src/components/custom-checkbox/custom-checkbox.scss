@@ -136,7 +136,8 @@
 
           &:after {
             position: absolute;
-            left: 4px;
+            right: 20px;
+            left: unset;
             color: var(--Marina-Oslo-Gray);
             font-size: 7px;
             font-style: normal;
@@ -153,7 +154,7 @@
 
       &__box {
         position: relative;
-        width: 46px;
+        width: 43px;
         height: 17px;
         display: flex;
         background-color: var(--color-grey-92);
@@ -179,7 +180,8 @@
 
         &:after {
           position: absolute;
-          right: 4px;
+          right: unset;
+          left: 20px;
           color: var(--Marina-Oslo-Gray);
           font-size: 7px;
           font-style: normal;
